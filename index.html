@@ -2,8 +2,8 @@
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hugo Cruces - Economist focusing on microdata analysis and economic modelling">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Hugo Cruces - Economist specializing in data analysis and economic modelling">
     <title>Hugo Cruces | Economist</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -178,9 +178,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             opacity: 0.9;
-            max-width: 700px;
+            max-width: 800px;
             line-height: 1.7;
         }
 
@@ -199,8 +199,8 @@
         }
 
         .hero-img {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid rgba(255, 255, 255, 0.3);
@@ -335,6 +335,8 @@
             .sidebar {
                 transform: translateX(-100%);
                 transition: transform 0.3s ease;
+                width: 100%;
+                max-width: 320px;
             }
 
             .sidebar.active {
@@ -353,37 +355,121 @@
                 display: block;
             }
 
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .hero h2 {
-                font-size: 2.2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            h2 {
                 font-size: 2rem;
             }
 
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
             section {
-                padding: 3rem 0;
+                padding: 2.5rem 0;
             }
 
             .hero {
-                padding: 4rem 0;
-                margin-top: 4rem;
+                padding: 3rem 0;
+                margin-top: 0;
+                padding-top: 5rem;
             }
 
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 1.5rem;
             }
             
+            .hero-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .lead-text {
+                font-size: 1.1rem;
+            }
+
+            .intro-text {
+                font-size: 1rem;
+            }
+
+            .pub-item {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .pub-title {
+                font-size: 1.1rem;
+            }
+
+            .pub-meta {
+                font-size: 0.9rem;
+            }
+
+            .mobile-toggle {
+                position: fixed;
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero {
+                padding: 2.5rem 0;
+                padding-top: 4.5rem;
+            }
+
             .hero-img {
                 width: 120px;
                 height: 120px;
             }
 
+            section {
+                padding: 2rem 0;
+            }
+
+            .sidebar {
+                padding: 2rem 1.5rem;
+            }
+
+            .sidebar-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .cv-link {
+                padding: 0.65rem 1rem;
+                font-size: 0.85rem;
+            }
         }
 
         /* Overlay for mobile */
@@ -409,7 +495,7 @@
 
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h1>Hugo Cruces</h1>
+            <h1><a href="#top" style="color: inherit; text-decoration: none;">Hugo Cruces</a></h1>
             <div class="sidebar-subtitle">
                 Economic Analyst<br>
                 European Commission<br>
@@ -432,29 +518,29 @@
     </aside>
 
     <main class="main-content">
-        <section class="hero">
+        <section id="top" class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <img src="img/pic.jpg" alt="Hugo Cruces" class="hero-img">
-                    <div class="hero-text">
-                        <h2>Hugo Cruces | Economist</h2>
-                        <p class="hero-subtitle">
-                            Specializing in data analysis and economic modelling
-                        </p>
-                    </div>
+            <div class="hero-content">
+                <img src="img/pic.jpg" alt="Hugo Cruces" class="hero-img">
+                <div class="hero-text">
+                <h2>Hugo Cruces</h2>
+                <p class="hero-subtitle">
+                    Economist specializing in quantitative analysis and economic modelling
+                </p>
                 </div>
+            </div>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
                 <h2>About</h2>
-                
-                <p class="intro-text">I am an economist working in the <a href="https://joint-research-centre.ec.europa.eu/projects-and-activities/fiscal-policy-analysis_en" target="_blank">Fiscal Policy Analysis Unit</a> of the European Commission's Joint Research Centre.
 
-                <p class="intro-text">I lead a team analysing the <a href="https://health.ec.europa.eu/publications/report-role-healthcare-reducing-inequalities-and-poverty-eu_en" target="_blank">contribution of public healthcare systems to fairness and social resilience in the EU</a> and develop the microsimulation model <a href="https://euromod-web.jrc.ec.europa.eu/" target="_blank">EUROMOD</a>, which is used by European Institutions to study the distributional impact of tax-benefit policies. My work has supported policy making in several EU Member States.</p>
+                <p class="intro-text">I am an economist at the European Commission's Joint Research Centre, where I work in the <a href="https://joint-research-centre.ec.europa.eu/projects-and-activities/fiscal-policy-analysis_en" target="_blank">Fiscal Policy Analysis Unit</a>.
 
-                <p class="intro-text">My main research interests include distributional analysis 📊, evaluation of public policies 🏛️ and coding 💻. I also enjoy synthesizing economic data into actionable policy insights and communicating complex findings in an accessible way.</p>
+                <p class="intro-text">I lead a team analysing <a href="https://health.ec.europa.eu/publications/report-role-healthcare-reducing-inequalities-and-poverty-eu_en" target="_blank">how public healthcare systems contribute to fairness and social resilience in the EU</a>. I also develop <a href="https://euromod-web.jrc.ec.europa.eu/" target="_blank">EUROMOD</a>, a microsimulation model used by European institutions to assess the distributional and budgetary impact of tax and benefit policies. My work has directly supported policy making in several EU Member States.</p>
+
+                <p class="intro-text">My main research interests include distributional analysis 📊, public policy evaluation 🏛️ and coding 💻. I also enjoy communicating research findings to broader audiences 👥💬.</p>
             </div>
         </section>
 
