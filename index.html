@@ -438,6 +438,150 @@
             height: 13px;
         }
 
+        /* ── RESEARCH HIGHLIGHTS ── */
+        .highlight-item {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--warm-gray);
+        }
+
+        .highlight-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .highlight-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .highlight-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-year {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--mid-gray);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .highlight-venue {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .highlight-title {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.3;
+            margin-bottom: 0.35rem;
+            letter-spacing: -0.01em;
+        }
+
+        .highlight-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .highlight-title a:hover {
+            color: var(--accent);
+        }
+
+        .highlight-authors {
+            font-size: 0.88rem;
+            color: var(--mid-gray);
+            font-style: italic;
+            margin-bottom: 1.75rem;
+        }
+
+        .highlight-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .highlight-text p {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-figure {
+            border: 1px solid var(--warm-gray);
+            background: #fff;
+            cursor: zoom-in;
+        }
+
+        @media (max-width: 700px) {
+            .highlight-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── LIGHTBOX ── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .figure-placeholder {
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--warm-gray);
+            color: var(--mid-gray);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .figure-caption {
+            padding: 0.65rem 0.85rem;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            border-top: 1px solid var(--warm-gray);
+        }
+
+        @media (max-width: 700px) {
+            .highlight-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ── TEACHING ── */
         .teaching-intro {
             font-size: 1rem;
@@ -785,6 +929,7 @@
         <nav>
             <ul>
                 <li><a href="#about" onclick="closeSidebar()">About</a></li>
+                <li><a href="#highlights" onclick="closeSidebar()">Highlights</a></li>
                 <li><a href="#research" onclick="closeSidebar()">Research</a></li>
                 <li><a href="#teaching" onclick="closeSidebar()">Teaching</a></li>
                 <li><a href="#contact" onclick="closeSidebar()">Contact</a></li>
@@ -842,29 +987,84 @@
                             href="https://joint-research-centre.ec.europa.eu/projects-and-activities/fiscal-policy-analysis_en"
                             target="_blank">Fiscal Policy Analysis Unit</a>.</p>
 
-                    <p>I led a team analysing <a
-                            href="https://health.ec.europa.eu/publications/report-role-healthcare-reducing-inequalities-and-poverty-eu_en"
+                    <p>I develop <a href="https://euromod-web.jrc.ec.europa.eu/" target="_blank">EUROMOD</a>, a
+                        microsimulation model used by European institutions to assess
+                        the distributional and budgetary impact of tax and benefit policies. I led a team analysing <a
+                            href="https://op.europa.eu/en/publication-detail/-/publication/e86e91df-a97a-11f0-89c6-01aa75ed71a1"
                             target="_blank">how public healthcare systems contribute to fairness and social resilience
-                            in the EU</a>. I develop <a href="https://euromod-web.jrc.ec.europa.eu/"
-                            target="_blank">EUROMOD</a>, a microsimulation model used by European institutions to assess
-                        the distributional and budgetary impact of tax and benefit policies. My work has directly
-                        supported policy making in several EU Member States.</p>
+                            in the EU</a>. My work has directly supported policy making in several EU Member States.</p>
 
-                    <p>My main research interests include distributional analysis, public policy evaluation, and coding.
-                        I also enjoy communicating research findings to broader audiences.</p>
+                    <p>My main research interests include distributional analysis, public policy evaluation, coding and
+                        applied Artificial Intelligence. I also enjoy communicating research findings to diverse
+                        audiences.</p>
                 </div>
                 <div class="interests fade-in">
                     <span class="interest-tag">Distributional Analysis</span>
                     <span class="interest-tag">Economic Modelling</span>
                     <span class="interest-tag">Fiscal Policy</span>
                     <span class="interest-tag">Coding</span>
+                    <span class="interest-tag">Artificial Intelligence</span>
                     <span class="interest-tag">Science Communication</span>
                 </div>
             </div>
         </section>
 
+        <!-- RESEARCH HIGHLIGHTS -->
+        <section id="highlights">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-label">Recent Work</div>
+                    <h2 class="section-title">Research Highlights</h2>
+                    <hr class="section-rule">
+                </div>
+
+                <!-- HIGHLIGHT ITEM — replace placeholder content when ready -->
+                <div class="highlight-item fade-in">
+                    <div class="highlight-meta">
+                        <span class="highlight-year">2026</span>
+                        <span class="highlight-venue">JRC Science for Policy Reports &middot; European Commission</span>
+                    </div>
+                    <h3 class="highlight-title">
+                        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC146328"
+                            target="_blank">Spain's Child Support Fails the Poor: Actionable Policy Reforms</a>
+                    </h3>
+                    <div class="highlight-authors">with Kateryna Bornukova, Adri&aacute;n Hern&aacute;ndez, and Fidel
+                        Picos</div>
+                    <div class="highlight-body">
+                        <div class="highlight-text">
+                            <p>Spain has the EU's highest child poverty rate, reaching 29.2% in 2024. Its main child
+                                tax credit
+                                (<em>m&iacute;nimo por descendientes</em>) bypasses most poor families because
+                                it is non-refundable, so households with little tax liability receive close to nothing.
+                                As
+                                the figure shows, the credit delivers more support per child to higher-income
+                                households.</p>
+                            <p>We find that two reforms could improve this. Making the child tax credit
+                                refundable would reach low-income families currently excluded, reducing child poverty
+                                at a small cost. A Universal Child Benefit of &euro;340/month per
+                                child
+                                would bring Spain to the EU average poverty rate, costing 1.3% of GDP &mdash; well below
+                                the 4&ndash;5% of GDP that childhood disadvantage costs the economy.</p>
+                        </div>
+                        <div class="highlight-figure" onclick="openLightbox(this)">
+                            <img src="img/childsupportspain.png"
+                                alt="Mean monthly child benefit by income decile in Spain, showing higher-income households receive more support per child"
+                                style="width:100%;display:block;">
+                            <div class="figure-caption">Mean monthly amount per child received from each benefit
+                                instrument, by equivalised household income decile. The child tax credit
+                                (<em>m&iacute;nimo por descendientes</em>) disproportionately benefits higher-income
+                                households.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HIGHLIGHT ITEM -->
+
+            </div>
+        </section>
+
         <!-- RESEARCH -->
-        <section id="research">
+        <section id="research" class="section-alt">
             <div class="container">
                 <div class="section-header fade-in">
                     <div class="section-label">Publications & Work</div>
@@ -909,6 +1109,19 @@
 
                 <div class="research-category fade-in">
                     <div class="category-name">Working Papers</div>
+
+                    <div class="pub">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-body">
+                            <div class="pub-title"><a
+                                    href="https://publications.jrc.ec.europa.eu/repository/handle/JRC146328"
+                                    target="_blank">Spain's Child Support Fails the Poor: Actionable Policy Reforms</a>
+                            </div>
+                            <div class="pub-venue">JRC Science for Policy Reports, European Commission, 2026</div>
+                            <div class="pub-coauthors">with Kateryna Bornukova, Adri&aacute;n Hern&aacute;ndez, and
+                                Fidel Picos</div>
+                        </div>
+                    </div>
 
                     <div class="pub">
                         <div class="pub-year">2021</div>
@@ -1005,7 +1218,7 @@
         </section>
 
         <!-- TEACHING -->
-        <section id="teaching" class="section-alt">
+        <section id="teaching">
             <div class="container">
                 <div class="section-header fade-in">
                     <div class="section-label">University of Vigo, Spain</div>
@@ -1055,7 +1268,7 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact">
+        <section id="contact" class="section-alt">
             <div class="container">
                 <div class="section-header fade-in">
                     <div class="section-label">Get in touch</div>
@@ -1116,6 +1329,10 @@
         </div>
     </footer>
 
+    <div id="lightbox" class="lightbox">
+        <img src="" alt="Enlarged figure">
+    </div>
+
     <script>
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('active');
@@ -1158,6 +1375,20 @@
                     link.classList.add('active');
                 }
             });
+        });
+        function openLightbox(figureEl) {
+            const src = figureEl.querySelector('img').src;
+            const lb = document.getElementById('lightbox');
+            lb.querySelector('img').src = src;
+            lb.classList.add('active');
+        }
+
+        document.getElementById('lightbox').addEventListener('click', function () {
+            this.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('active');
         });
     </script>
 </body>
