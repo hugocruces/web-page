@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional CV
+% Hugo Cruces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV theme and color
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.82]{geometry}
+\usepackage{enumitem}
+\usepackage{lmodern}
+
+% Tighten vertical spacing between cv entries
+\usepackage{etoolbox}
+\patchcmd{\cventry}{\addvspace{0pt}}{\addvspace{-2pt}}{}{}
+\patchcmd{\cvitem}{\addvspace{.25em}}{\addvspace{.15em}}{}{}
+
+% Customize font sizes for name and title
+\renewcommand*{\titlefont}{\huge\mdseries\upshape}
+
+% Subsection heading without dotted leaders
+\newcommand{\cvsubsection}[1]{%
+  \par\addvspace{0.5em}%
+  \noindent{\small\color{color1}\textbf{#1}}\par%
+  \addvspace{0.15em}%
+}
+
+% Personal data
+\name{Hugo}{Cruces}
+\title{Empirical economist}
+\email{hugo.cruces@ec.europa.eu}
+\homepage{hugocruces.github.io/web-page}
+\extrainfo{Joint Research Centre, European Commission}
+
+\begin{document}
+
+\makecvtitle
+\vspace{-1.5em}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+\cvitem{}{Economist with a PhD and 4+ years of experience in distributional analysis and public policy evaluation at the European Commission's Joint Research Centre. Specialises in empirical analysis, microsimulation modelling and applied Artificial Intelligence.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\cventry{October 2021 -- Present}{Economic Analyst \& Team Leader}{Joint Research Centre, European Commission}{Seville, Spain}{}{
+  \begin{itemize}
+    \item Develop and maintain the EUROMOD tax-benefit microsimulation model for EU-wide fiscal policy analysis
+    \item Lead research team analysing distributional impact of health social transfers in-kind, in collaboration with DG SANTE
+    \item Analysis of large and complex data (e.g., EU-SILC, HFCS, HBS) with advanced methods
+    \item Conduct economic analyses for the European Semester, in collaboration with DG ECFIN, DG EMPL and DG TAXUD
+    \item Communicate policy-actionable results in meetings, reports and technical documents
+  \end{itemize}}
+
+\cventry{February 2025 -- May 2025}{Adjunct Professor}{University of Vigo}{Vigo, Spain}{}{
+  \begin{itemize}
+    \item Teach the course \textit{Advanced Data Analysis}
+  \end{itemize}}
+
+\cventry{November 2020 -- March 2021}{Acting Professor}{University of Vigo}{Vigo, Spain}{}{
+  \begin{itemize}
+    \item Taught the course \textit{Economic History}
+  \end{itemize}}
+
+\cventry{January 2016 -- October 2020}{Predoctoral Researcher}{University of Vigo}{Vigo, Spain}{}{
+  \begin{itemize}
+    \item Conducted research using microdata and advanced econometric and machine learning techniques
+  \end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{February 2021}{Ph.D. in Economics}{University of Vigo}{Spain}{\textit{Sobresaliente Cum Laude}}{}
+
+\cventry{March 2015}{M.A. in Economics}{Complutense University of Madrid}{Spain}{}{}
+
+\cventry{July 2012}{B.A. in Economics}{University of Santiago de Compostela}{Spain}{}{}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH
+%----------------------------------------------------------------------------------------
+
+\section{Research}
+
+\cvsubsection{Peer-Reviewed Articles}
+\cvitem{2026}{Escaping the Inactivity Trap? The Work Incentive of the Spanish Minimum Income. \textit{Journal of Policy Modeling} 48(1): 107--129 (with A. Hernández and E. Narazani)}
+\cvitem{2021}{Issues on the Measurement of Opportunity Inequality. \textit{Erasmus Journal for Philosophy and Economics} 15(1): 172--178}
+\cvitem{2019}{Preference Orderings Representable By Utility Functions. \textit{Journal of Economic Surveys} 33(1): 179--194 (with C. Hervés-Beloso)}
+
+\cvsubsection{Working Papers}
+\cvitem{2026}{Spain's Child Support Fails the Poor: Actionable Policy Reforms. \textit{JRC Science for Policy Reports, European Commission} (with K. Bornukova, A. Hernández, and F. Picos)}
+\cvitem{2021}{Households or Individuals? Gender and the Level of Analysis when Measuring Opportunity Inequality. \textit{ECOBAS Working Papers}}
+\cvitem{2020}{Using Capital Income to Proxy Family Background: An Application to Inequality of Opportunity. \textit{ECOBAS Working Papers}}
+
+\cvsubsection{Reports}
+\cvitem{2025}{The Role of Healthcare in Reducing Inequalities and Poverty in the EU. \textit{European Commission, Directorate-General for Health and Food Safety} (main author)}
+\cvitem{2022}{Regional Economic Outlook. Europe: the fog of war clouds the European outlook. \textit{International Monetary Fund} (contributing author)}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Technical Skills \& Statistical Expertise}
+
+\cvitem{Statistical Software}{\textbf{Expert:} Stata, EUROMOD \textbar{} \textbf{Advanced:} R, gretl}
+\cvitem{Data analysis}{Panel data, microsimulation modelling, machine learning}
+\cvitem{Programming}{\textbf{Intermediate:} HTML/CSS, Bash, Git version control}
+\cvitem{Technical Writing}{\LaTeX, Markdown, Microsoft Office suite}
+\cvitem{AI tools}{IDEs, MCP servers, API integration, multi-agent systems design}
+
+%----------------------------------------------------------------------------------------
+%	KEY ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+
+\section{Achievements}
+
+\cvitem{EPSO Competition}{Placed on reserve list EPSO/AD/412/24 -- Administrators in the field of Data and Statistics (AD6)}
+\cvitem{EPSO Competition}{Placed on reserve list EPSO/AD/402/23 -- Administrators in the field of Microeconomics/macroeconomics (AD6)}
+\cvitem{International Award}{Aldi Hagenaars Memorial Award 2020, LIS Cross-National Data Center}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{Galician}{Native}{}
+\cvitemwithcomment{English}{Fluent}{Cambridge Certificate of Proficiency in English}
+\cvitemwithcomment{Italian}{Intermediate}{}
+
+%----------------------------------------------------------------------------------------
+%	EVENTS
+%----------------------------------------------------------------------------------------
+
+\section{Events}
+
+\cvitem{2026}{Instructor, \textit{Implementation of AI tools}, internal workshops for the European Commission}
+\cvitem{2025}{Roundtable speaker, \textit{Acto Institucional 17 de octubre por el Día Internacional para la Erradicación de la Pobreza}, organised by the European Anti-Poverty Network Spain}
+\cvitem{2024}{Roundtable speaker and discussion group coordinator, \textit{Desafíos y horizontes de la garantía infantil en España}, organised by the European Commission and \textit{La Caixa} Foundation}
+\cvitem{2024}{Co-organizer, 6th JRC Fiscal Policy Modelling Workshop}
+\cvitem{2022--2024}{Coordinator, Biweekly Academic Seminars, Fiscal Policy Analysis Unit (JRC.B2)}
+
+\begin{center}
+  \footnotesize Last updated: \today
+\end{center}
+
+\end{document}

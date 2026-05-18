@@ -1,2 +1,10 @@
 img/mountains-small.jpeg
 img/mountains.jpeg
+.claude/
+
+*.aux
+*.fdb_latexmk
+*.synctex.gz
+*.log
+*.out
+*.fls
